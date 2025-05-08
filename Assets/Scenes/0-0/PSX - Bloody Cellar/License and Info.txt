@@ -1,0 +1,53 @@
+Made by: SnowyCocoon
+Version: 1.0
+Asset Version: PAID
+Date: 31.01.2025
+
+Check out my other assets and works: https://www.snowycocoon.com
+
+License Agreement
+Parties:
+
+Licensor: [Dominik Strzałko / SnowyCocoon]
+Licensee: The purchaser of this asset pack
+
+Permitted Uses:
+✔ The Licensee may use the assets in any interactive game project, including both commercial and non-commercial releases.
+✔ The Licensee may modify or edit the assets as needed for their game projects.
+
+Prohibited Uses:
+❌ The Licensee may not resell, redistribute, or share the assets in their original or modified form, except as part of a compiled, playable game project.
+❌ The Licensee may not include the assets in asset bundles, template kits, or any other collections intended for redistribution.
+❌ The Licensee may not use the assets for training artificial intelligence models or datasets.
+
+Ownership & Rights:
+The Licensor retains full ownership and intellectual property rights over the assets.
+This agreement grants a license for use but does not transfer ownership to the Licensee.
+
+
+Info from page:
+PSX Textures - Bloody Cellar
+A nightmare sealed away... until now.
+The old house was never meant to be explored. At least, that’s what the locals said. The cellar door was nailed shut decades ago, but something down there still breathes.
+
+Now, it’s your turn to bring that nightmare to life.
+
+"Bloody Cellar" is a PSX-style texture pack crafted for indie horror developers who crave the grainy, lo-fi terror of the late ‘90s. With grimy stone walls, raw concrete, rusted metal, and floors stained with something not quite red paint, every asset is designed to make your game feel like a lost, forbidden relic from a haunted PlayStation disc.
+
+This Pack Includes:
+✅ Seamless textures in two resolutions: 256x256 and 128x128 
+
+ ✅ All textures in .png format 
+
+ ✅ 20 Base Textures, each with:
+
+4 Bloody Variants (2 unique blood patterns, each in low & high intensity)
+2 Texture Styles 
+ ✅ Bonus: 5 decals (with more to come!) 
+
+ ✅ Weekly Updates! Expand your horror arsenal with fresh assets every week—at no extra cost!
+
+464 Total Textures for maximum variety, and blending possibilities.
+​All textures were created in Substance Designer.
+
+-SnowyCocoon
