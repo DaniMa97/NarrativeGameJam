@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     float m_cameraVerticalAngle = 0f;
     bool m_isAllowedMaskChange = true;
     Vector3 m_moveInput = Vector3.zero;
+    Vector3 m_moveInputWorld = Vector3.zero;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,7 +43,9 @@ public class PlayerController : MonoBehaviour
         m_moveInput.x = Input.GetAxisRaw("Horizontal");
         m_moveInput.z = Input.GetAxisRaw("Vertical");
         m_moveInput = Vector3.ClampMagnitude(m_moveInput, 1);
-        m_controller.Move(m_moveInput * speed * Time.deltaTime);
+        m_moveInputWorld = transform.TransformVector(m_moveInput);
+
+        m_controller.Move(m_moveInputWorld * speed * Time.deltaTime);
 
         // Mask control
         if(m_isAllowedMaskChange && Input.GetKeyDown(KeyCode.E))
