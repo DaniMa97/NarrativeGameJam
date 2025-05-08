@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -32,5 +33,10 @@ public class GameController : MonoBehaviour
     public bool GetIsMaskOn()
     {
         return isMaskOn;
+    }
+
+    public void GoToMainScene()
+    {
+        SceneManager.LoadScene("tutorial");
     }
 }
