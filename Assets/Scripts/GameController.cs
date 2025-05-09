@@ -77,11 +77,11 @@ public class GameController : MonoBehaviour
 
     public void KillPlayer()
     {
-        print("The player is dead");
+        GameObject.FindFirstObjectByType<MainGameEvents>().PlayerDeath();
     }
 
-    public void GoToMainScene()
+    public void GoToScene(string sceneName)
     {
-        SceneManager.LoadScene("tutorial");
+        SceneManager.LoadScene(sceneName);
     }
 }

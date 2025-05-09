@@ -7,11 +7,11 @@ public class MainMenuEvents : MonoBehaviour
     UIDocument m_document;
     Button m_buttonStart;
     Button m_buttonSettings;
-    Button m_buttonCredits;
+    //Button m_buttonCredits;
     Button m_buttonExit;
 
     Button m_buttonBackSettings;
-    Button m_buttonBackCredits;
+    //Button m_buttonBackCredits;
 
     Slider m_masterSlider;
     Slider m_musicSlider;
@@ -38,14 +38,14 @@ public class MainMenuEvents : MonoBehaviour
         m_buttonStart.RegisterCallback<ClickEvent>(OnButtonStart);
         m_buttonSettings = root.Q("ButtonSettings") as Button;
         m_buttonSettings.RegisterCallback<ClickEvent>(OnButtonSettings);
-        m_buttonCredits = root.Q("ButtonCredits") as Button;
-        m_buttonCredits.RegisterCallback<ClickEvent>(OnButtonCredits);
+        //m_buttonCredits = root.Q("ButtonCredits") as Button;
+        //m_buttonCredits.RegisterCallback<ClickEvent>(OnButtonCredits);
         m_buttonExit = root.Q("ButtonExit") as Button;
         m_buttonExit.RegisterCallback<ClickEvent>(OnButtonExit);
         m_buttonBackSettings = root.Q("ButtonBackSettings") as Button;
         m_buttonBackSettings.RegisterCallback<ClickEvent>(OnButtonBackSettings);
-        m_buttonBackCredits = root.Q("ButtonBackCredits") as Button;
-        m_buttonBackCredits.RegisterCallback<ClickEvent>(OnButtonBackCredits);
+        //m_buttonBackCredits = root.Q("ButtonBackCredits") as Button;
+        //m_buttonBackCredits.RegisterCallback<ClickEvent>(OnButtonBackCredits);
 
         m_masterSlider = root.Q("MasterSlider") as Slider;
         m_masterSlider.RegisterValueChangedCallback(OnMasterSliderChanged);
@@ -95,7 +95,7 @@ public class MainMenuEvents : MonoBehaviour
         }
         m_sceneFade.style.backgroundColor = new Color(color.r, color.g, color.b, 1);
         yield return new WaitForSeconds(0.01f);
-        GameController.GetInstance().GoToMainScene();
+        GameController.GetInstance().GoToScene("tutorial");
     }
 
     IEnumerator FadeInScene()

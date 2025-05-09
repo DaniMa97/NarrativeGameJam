@@ -1,0 +1,21 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=82caf57cc29d9b64eb2c6210f88e20f7&amp;type=3#MainMenuStyle" />
+    <engine:VisualElement name="Root" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); color: rgba(27, 27, 27, 0);">
+        <engine:VisualElement name="TitleContainer" style="flex-grow: 1; position: absolute; background-color: rgb(0, 0, 0); width: 100%; height: 100%;">
+            <engine:VisualElement name="Title" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Scenes/0-0/TITLE.png?fileID=2800000&amp;guid=fe8926bbd85f775499b2a474bbd48b22&amp;type=3#TITLE&quot;); background-size: 50% 50%; padding-top: 128px;" />
+            <engine:VisualElement name="Buttons" style="flex-grow: 1; justify-content: space-evenly; align-items: center;">
+                <engine:Button text="Button" name="ButtonMenuWin" style="background-image: url(&quot;project://database/Assets/Scenes/0-0/Button%20Itch%20Pack/Main%20Menu/Main%20Menu.gif?fileID=2800000&amp;guid=f7f6af50608e5e34a9168a1bd46c2bfd&amp;type=3#Main Menu&quot;); width: 30%; height: 20%; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="DeathContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.31); display: flex; position: absolute; width: 100%; height: 100%;">
+            <engine:VisualElement name="Title" style="flex-grow: 1;">
+                <engine:Label text="You died!" style="font-size: 200px; width: 100%; height: 100%; -unity-text-align: middle-center; color: rgb(67, 0, 0); -unity-font-definition: url(&quot;project://database/Assets/Scenes/0-0/Devils%20Crew.otf?fileID=12800000&amp;guid=275c950884a74b54fba13880b398c846&amp;type=3#Devils Crew&quot;);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="Buttons" style="flex-grow: 1; flex-direction: row; justify-content: space-evenly; align-content: auto; align-items: center;">
+                <engine:Button text="Retry" name="ButtonRestart" style="width: 30%; height: 15%; background-image: url(&quot;project://database/Assets/Scenes/0-0/Button%20Itch%20Pack/Restart/Restart.gif?fileID=2800000&amp;guid=8591a7fa52a51f144aa538f6732c05a5&amp;type=3#Restart&quot;); background-color: rgba(143, 156, 255, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                <engine:Button text="Return to menu" name="ButtonMenuDeath" style="background-image: url(&quot;project://database/Assets/Scenes/0-0/Button%20Itch%20Pack/Main%20Menu/Main%20Menu.gif?fileID=2800000&amp;guid=f7f6af50608e5e34a9168a1bd46c2bfd&amp;type=3#Main Menu&quot;); width: 30%; height: 15%; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="SceneFade" style="flex-grow: 1; background-color: rgb(0, 0, 0);" />
+    </engine:VisualElement>
+</engine:UXML>

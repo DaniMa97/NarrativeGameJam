@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
     Vector3 m_moveInput = Vector3.zero;
     Vector3 m_moveInputWorld = Vector3.zero;
     float verticalVelocity = 0f; // Used to simulate gravity
+    bool isMaskFunctionalityEnabled = true;
 
     List<IInteractable> m_interactableObjects = new List<IInteractable>();
 
@@ -59,6 +60,8 @@ public class PlayerController : MonoBehaviour
 
     // Mask anim
     bool m_puttingMask = false;
+
+    bool isPlayerDead = false;
 
     void Start()
     {
@@ -91,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(m_puttingMask)
+        if(m_puttingMask || isPlayerDead)
         {
             return;
         }
@@ -150,7 +153,7 @@ public class PlayerController : MonoBehaviour
         m_controller.Move(fullMove * Time.deltaTime);
 
         // Mask control
-        if (m_isAllowedMaskChange && Input.GetMouseButtonDown(0))
+        if (m_isAllowedMaskChange && Input.GetMouseButtonDown(0) && isMaskFunctionalityEnabled)
         {
             m_animator.SetTrigger("ChangeMask");
             m_isAllowedMaskChange = false;
@@ -206,8 +209,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            KillPlayer();
+        }
+    }
+
     void KillPlayer()
     {
-        GameController.GetInstance().KillPlayer();
+        if(!isPlayerDead)
+        {
+            //Release the cursor
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            isPlayerDead = true;
+            GameController.GetInstance().KillPlayer();
+        }
+    }
+
+    public void ChangeMaskSettings(bool isEnabled)
+    {
+        isMaskFunctionalityEnabled = isEnabled;
     }
 }

@@ -51,7 +51,6 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        print(currentState);
         if(currentState == State.Patroling)
         {
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
@@ -115,12 +114,6 @@ public class EnemyController : MonoBehaviour
         Vector3 playerDir = playerPos.position - myPos;
         float playerAngle = Vector3.Angle(transform.forward, playerDir);
         float playerDistance = Vector3.Distance(myPos, playerPos.position);
-
-        if(enemyType == EnemyType.Monster)
-        {
-            print("Distance: " + playerDistance);
-            print("Angle: " + playerAngle);
-        }
 
         if(playerAngle <= angleVision/2 && playerDistance <= distanceVision)
         {
