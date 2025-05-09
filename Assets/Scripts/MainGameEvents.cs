@@ -48,6 +48,7 @@ public class MainGameEvents : MonoBehaviour
 
     public void PlayerWin()
     {
+        GameObject.FindAnyObjectByType<PlayerController>().UnlockCursor();
         m_titleScene.style.display = DisplayStyle.Flex;
     }
 

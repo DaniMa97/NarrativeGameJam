@@ -217,6 +217,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PlayerWon()
+    {
+        isPlayerDead = true;
+    }
+
     void KillPlayer()
     {
         if(!isPlayerDead)
@@ -228,6 +233,13 @@ public class PlayerController : MonoBehaviour
             isPlayerDead = true;
             GameController.GetInstance().KillPlayer();
         }
+    }
+
+    public void UnlockCursor()
+    {
+        //Release the cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void ChangeMaskSettings(bool isEnabled)

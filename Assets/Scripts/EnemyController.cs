@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class EnemyController : MonoBehaviour
 {
-    enum State { Patroling, Waiting, Chasing, Searching }
+    enum State { Patroling, Waiting, Chasing, Searching , None}
 
     [Tooltip("Points to which move the agent.")]
     public List<GameObject> patrolPoints = new List<GameObject>();
@@ -49,8 +49,17 @@ public class EnemyController : MonoBehaviour
         currentSearchTime = searchTime;
     }
 
+    public void Stop()
+    {
+        currentState = State.None;
+    }
+
     private void Update()
     {
+        if(currentState == State.None)
+        {
+            return;
+        }
         if(currentState == State.Patroling)
         {
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
