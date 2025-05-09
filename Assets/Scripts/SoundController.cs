@@ -44,4 +44,9 @@ public class SoundController : MonoBehaviour
     {
         voiceVolume = value;
     }
+
+    public float GetSfxVolume()
+    {
+        return masterVolume*sfxVolume;
+    }
 }

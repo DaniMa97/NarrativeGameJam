@@ -6,6 +6,7 @@ public class WorldSwitchDoor : MonoBehaviour
     public float interactRange = 3f;
     public AudioClip openSound;
     public AudioSource audioSource;
+    GameObject playerGO;
 
     private bool doorUsed = false;
 
@@ -17,6 +18,7 @@ public class WorldSwitchDoor : MonoBehaviour
             audioSource.playOnAwake = false;
             audioSource.spatialBlend = 0f; // 2D sound
         }
+        playerGO = GameObject.Find("Player");
     }
 
     void Update()
@@ -30,8 +32,7 @@ public class WorldSwitchDoor : MonoBehaviour
                 Debug.Log("World switching...");
                 if (openSound != null)
                     audioSource.PlayOneShot(openSound);
-
-                GameController.GetInstance().ChangeMask(); // Force switch
+                playerGO.GetComponent<Animator>().SetTrigger("ChangeMask");
                 doorUsed = true;
                 Destroy(gameObject);
             }

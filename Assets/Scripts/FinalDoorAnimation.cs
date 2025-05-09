@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class FinalDoorAnimation : MonoBehaviour
 {
     GameObject player;
     public GameObject monster;
     public float interactRange = 3f;
     public float monsterOffset = 2;
+
+    AudioSource jumpScare;
+    public AudioClip jumpScareClip;
 
     float playerYRot;
     float error = 0.01f;
@@ -17,6 +20,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player");
+        jumpScare = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -45,6 +49,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
             currentRot += 0.01f;
             yield return new WaitForSeconds(0.01f);
         }
+        jumpScare.PlayOneShot(jumpScareClip, SoundController.GetInstance().GetSfxVolume());
         yield return new WaitForSeconds(1f);
         GameObject.FindFirstObjectByType<MainGameEvents>().PlayerWin();
     }
