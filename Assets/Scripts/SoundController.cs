@@ -31,21 +31,17 @@ public class SoundController : MonoBehaviour
     public void SetMasterVolume(float value)
     {
         masterVolume = value;
-        print(value);
     }
     public void SetMusicVolume(float value)
     {
         musicVolume = value;
-        print(value);
     }
     public void SetSfxVolume(float value)
     {
         sfxVolume = value;
-        print(value);
     }
     public void SetVoiceVolume(float value)
     {
         voiceVolume = value;
-        print(value);
     }
 }
